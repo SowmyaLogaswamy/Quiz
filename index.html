@@ -1,46 +1,73 @@
 <html>
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-   <link href="css/styles.css" rel="stylesheet" type="text/css">
-   <script src="js/jquery-3.2.1.js"></script>
-   <script src="js/script.js"></script>
-  <title>Quiz</title>
-</head>
-<body>
-  <div class="container">
-    <form id="quizForm">
-    <div class="form-group">
-  <h1> Quiz (HTML/CSS/Javascript/JQuery)</h1>
-  <p> Please go through the questions and choose the best answer for it</p>
-  <ol>
-    <li>Which tag is used to display the ordered list of items?</li>
-    <div class="radio">
-         <input type="radio" name="quest1" value="oa">
-        ol<br>
-         <input type="radio" name="quest1" value="ob">
-         ul<br>
-         <input type="radio" name="quest1" value="oc">
-         li
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+     <link href="css/styles.css" rel="stylesheet" type="text/css">
+     <script src="js/jquery-3.2.1.js"></script>
+     <script src="js/script.js"></script>
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-group">
+        <div id="introPage">
+          <h1> Quiz (HTML/CSS/Javascript/JQuery)</h1>
+          <p> Please go through the questions and choose the best answer for it</p>
+          <button type="submit" class="btn btn-primary" id="startButton">Get Started to race!</button>
+        </div>
 
-    </div>
-    <li>Which tag is used to group block elements?</li>
-    <div class="radio">
-      <input type="radio" name="quest2" value="2a"> span<br>
-      <input type="radio" name="quest2" value="2b"> div<br>
-      <input type="radio" name="quest2" value="2c"> li
-    </div>
 
-    <li>Which tag is used for the inline elements?</li>
-    <div class="radio">
-      <input type="radio" name="quest3" value="3a"> div<br>
-      <input type="radio" name="quest3" value="3b"> ul<br>
-      <input type="radio" name="quest3" value="3c"> span
+        <div id="questions">
+          <div id="questionOne">
+            <form id="questionOneForm">
+              Which tag is used to display the ordered list of items?
+              <div class="radio">
+                <input type="radio" name="quest1" value="oa">ol<br>
+                <input type="radio" name="quest1" value="ob">ul<br>
+                <input type="radio" name="quest1" value="oc">li
+              </div>
+              <button type="submit" class="btn btn-primary" id="quest1Button">Next</button>
+            </form>
+          </div>
+
+          <div id="questionTwo">
+            <form id="questionTwoForm">
+              Which tag is used to group block elements?
+              <div class="radio">
+                <input type="radio" name="quest2" value="2a"> span<br>
+                <input type="radio" name="quest2" value="2b"> div<br>
+                <input type="radio" name="quest2" value="2c"> li
+              </div>
+              <button type="submit" class="btn btn-primary" id="quest2Button">Next</button>
+            </form>
+          </div>
+
+          <div id="questionTwo">
+            <form id="questionTwoForm">
+              Which tag is used for the inline elements?
+              <div class="radio">
+                <input type="radio" name="quest3" value="3a"> div<br>
+                <input type="radio" name="quest3" value="3b"> ul<br>
+                <input type="radio" name="quest3" value="3c"> span
+              </div>
+              <button type="submit" class="btn btn-primary" id="finishButton">Finish</button>
+            </form>
+          </div>
+
+          <div id="thankyou">
+            <form id="thankyouForm">
+              <p>Hurrayy!!! You have finished the Quiz</p>
+              <button type="submit" class="btn btn-primary" id="answersButton">View Answers</button>
+            </form>
+          </div>
+
+          <div id="answers">
+            <form id="answersForm">
+              <p>Hurrayy!!! You have finished the Quiz</p>
+              <button type="submit" class="btn btn-primary" id="backButton">Back</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-  </ol>
-  </div>
-  <p id="para"><p>
-    <button type="submit" class="btn" id="submitButton">Submit</
-  </form>
-</div>
-</body>
+  </body>
 </html>
