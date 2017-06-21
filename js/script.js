@@ -4,22 +4,48 @@
 // var question3 = $("input:radio[name='quest3']:checked").val();
 var answer1 = "";
 var answer2 = "";
-
+var answer3 = "";
+var answer4 = "";
+var answer5 = "";
 function findAnswers(questionNumber, answerNumber) {
-  
+
   if (questionNumber === 1) {
-    if(answerNumber === "oa") {
+    if(answerNumber === "ob") {
       alert("Correct");
     }
-    else if(answerNumber === "ob" || answerNumber === "oc") {
-      alert("1. Sorry! Wrong answer");
+    else if(answerNumber === "oa" || answerNumber === "oc") {
+      alert(" Sorry! Wrong answer");
     }
   }
   if (questionNumber === 2) {
     if(answerNumber === "2b") {
       alert("Correct");
     }
-    else if(answerNumber === "2a" || answerNumber === "2c") {
+    else if(answerNumber === "2a") {
+      alert("1. Sorry! Wrong answer");
+    }
+  }
+  if (questionNumber === 3) {
+    if(answerNumber === "3b") {
+      alert("Correct");
+    }
+    else if(answerNumber === "3a" || answerNumber === "3c") {
+      alert("1. Sorry! Wrong answer");
+    }
+  }
+  if (questionNumber === 4) {
+    if(answerNumber === "4c") {
+      alert("Correct");
+    }
+    else if(answerNumber === "4b" || answerNumber === "4a") {
+      alert("1. Sorry! Wrong answer");
+    }
+  }
+  if (questionNumber === 5) {
+    if(answerNumber === "5a") {
+      alert("Correct");
+    }
+    else if(answerNumber === "5b" || answerNumber === "5c") {
       alert("1. Sorry! Wrong answer");
     }
   }
@@ -81,37 +107,75 @@ $(document).ready(function() {
 
   $("#questionTwoForm").submit(function(event) {
     event.preventDefault();
-    $("#introPage").hide();
-    $("#questionOne").hide();
+    answer2 = $("input:radio[name='quest2']:checked").val();
+     findAnswers(2, answer2);
+    // $("#introPage").hide();
+    // $("#questionOne").hide();
      $("#questionTwo").hide( "slide", {direction: "left"}, 200);
     $("#questionThree").delay(250).show( "slide", {direction: "right"}, 200);
   });
 
   $("#questionThreeForm").submit(function(event) {
     event.preventDefault();
-    $("#introPage").hide();
-    $("#questionOne").hide();
-    $("#questionTwo").hide();
+    answer3 = $("input:radio[name='quest3']:checked").val();
+     findAnswers(3, answer3);
+    // $("#introPage").hide();
+    // $("#questionOne").hide();
+    // $("#questionTwo").hide();
     $("#questionThree").hide( "slide", {direction: "left"}, 200);
-    $("#thankyou").delay(250).show( "slide", {direction: "right"}, 200);
+    $("#questionFour").delay(250).show( "slide", {direction: "right"}, 200);
 
 });
+$("#questionFourForm").submit(function(event) {
+  event.preventDefault();
+  answer4 = $("input:radio[name='quest4']:checked").val();
+   findAnswers(4, answer4);
+  // $("#introPage").hide();
+  // $("#questionOne").hide();
+  // $("#questionTwo").hide();
+  // $("#questionThree").hide();
+  // $("#questionTwo").hide();
+  $("#questionFour").hide( "slide", {direction: "left"}, 200);
+  $("#questionFive").delay(250).show( "slide", {direction: "right"}, 200);
+
+});
+$("#questionFiveForm").submit(function(event) {
+  event.preventDefault();
+  answer5 = $("input:radio[name='quest5']:checked").val();
+   findAnswers(5, answer5);
+  // $("#introPage").hide();
+  // $("#questionOne").hide();
+  // $("#questionTwo").hide();
+  // $("#questionThree").hide();
+  // $("#questionFour").hide();
+  $("#questionFive").hide( "slide", {direction: "left"}, 200);
+  $("#thankyou").delay(250).show( "slide", {direction: "right"}, 200);
+  // $('#ending').effect( 'bounce', { times: 3 }, 'slow');
+});
+
 $("#thankyouForm").submit(function(event) {
   event.preventDefault();
-  $("#introPage").hide();
-  $("#questionOne").hide();
-  $("#questionTwo").hide();
-  $("#questionThree").hide();
+
+  // $('#ending').effect( 'bounce', { times: 3 }, 'slow');
+  $('#ending').click(function() {
+    // alert('alert!');
+    $(this).effect( 'bounce', { times: 3 }, 'slow');
+
+  });
+  // $("#introPage").hide();
+  // $("#questionOne").hide();
+  // $("#questionTwo").hide();
+  // $("#questionThree").hide();
   $("#thankyou").hide( "slide", {direction: "left"}, 200);
   $("#answers").delay(250).show( "slide", {direction: "right"}, 200);
 });
 $("#answersForm").submit(function(event) {
   event.preventDefault();
   $("#introPage").delay(250).show( "slide", {direction: "right"}, 200);
-  $("#questionOne").hide();
-  $("#questionTwo").hide();
-  $("#questionThree").hide();
-  $("#thankyou").hide();
+  // $("#questionOne").hide();
+  // $("#questionTwo").hide();
+  // $("#questionThree").hide();
+  // $("#thankyou").hide();
   $("#answers").hide( "slide", {direction: "left"}, 200);
 });
 });
