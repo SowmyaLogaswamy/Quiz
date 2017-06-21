@@ -3,12 +3,12 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
      <link href="css/styles.css" rel="stylesheet" type="text/css">
      <script src="js/jquery-3.2.1.js"></script>
+     <script src="js/jquery-ui.js"></script>
      <script src="js/script.js"></script>
     <title>Quiz</title>
   </head>
   <body>
     <div class="container">
-      <div class="form-group">
         <div id="introPage">
           <h1> Quiz (HTML/CSS/Javascript/JQuery)</h1>
           <p> Please go through the questions and choose the best answer for it</p>
@@ -16,8 +16,7 @@
         </div>
 
 
-        <div id="questions">
-          <div id="questionOne">
+          <div id="questionOne" class="questions">
             <form id="questionOneForm">
               Which tag is used to display the ordered list of items?
               <div class="radio">
@@ -29,7 +28,7 @@
             </form>
           </div>
 
-          <div id="questionTwo">
+          <div id="questionTwo" class="questions">
             <form id="questionTwoForm">
               Which tag is used to group block elements?
               <div class="radio">
@@ -41,8 +40,8 @@
             </form>
           </div>
 
-          <div id="questionTwo">
-            <form id="questionTwoForm">
+          <div id="questionThree" class="questions">
+            <form id="questionThreeForm">
               Which tag is used for the inline elements?
               <div class="radio">
                 <input type="radio" name="quest3" value="3a"> div<br>
@@ -53,21 +52,20 @@
             </form>
           </div>
 
-          <div id="thankyou">
+          <div id="thankyou" class="questions">
             <form id="thankyouForm">
               <p>Hurrayy!!! You have finished the Quiz</p>
               <button type="submit" class="btn btn-primary" id="answersButton">View Answers</button>
             </form>
           </div>
 
-          <div id="answers">
+          <div id="answers" class="questions">
             <form id="answersForm">
-              <p>Hurrayy!!! You have finished the Quiz</p>
-              <button type="submit" class="btn btn-primary" id="backButton">Back</button>
+              <p>Here are the answers!!!</p>
+              <button type="submit" class="btn btn-primary" id="backButton">Start Over</button>
             </form>
           </div>
-        </div>
-      </div>
+
     </div>
   </body>
 </html>
