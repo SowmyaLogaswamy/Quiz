@@ -14,11 +14,11 @@ $(document).ready(function() {
    }
    else if(question1 === "ob" || question2 === "oc")
    {
-     $("#para").text("1. Sorry! Wrong answer");
+     $("#para").append("1. Sorry! Wrong answer");
    }
    if(question2 === "2a" || question2 === "2c")
    {
-      $("#para").text("2. Sorry! Wrong answer");
+      $("#para").append("2. Sorry! Wrong answer");
    }
    else if(question2 === "2b")
    {
